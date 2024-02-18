@@ -4,7 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'hot-reload',
+    loadChildren: () => import('./pages/hot-reload/hot-reload.module').then( m => m.HotReloadPageModule)
   },
   {
     path: '',

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-text color="primary">Developer Tools </ion-text>
+      <ion-text color="secondary">Course</ion-text>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2>Use cases</h2>
+
+  <div class="app-use-cases">
+    <div *ngFor="let useCase of useCases" class="app-use-case">
+      <ion-button [routerLink]="['/', useCase.path]" [disabled]="useCase.disabled">
+        <ion-icon [name]="useCase.icon"></ion-icon>
+      </ion-button>
+      {{ useCase.title }}
+    </div>
+    <div *ngFor="let i of [0, 1, 2, 3, 4, 5]" class="app-use-case"></div>
+  </div>
+</ion-content>

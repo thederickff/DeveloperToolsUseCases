@@ -1,0 +1,40 @@
+ion-content {
+  --padding-start: 1em;
+  --padding-end: 1em;
+
+  h2 {
+    font-size: 18px;
+    color: var(--ion-color-medium);
+    text-transform: uppercase;
+  }
+
+  .app-use-cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .app-use-case {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--ion-color-medium);
+      text-align: center;
+      padding: 0.5em;
+      width: 120px;
+
+      ion-button {
+        width: 92px;
+        height: 92px;
+
+        ion-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        &::part(native) {
+          border-radius: 1.25em 0 1.25em 1.25em;
+        }
+      }
+    }
+  }
+}

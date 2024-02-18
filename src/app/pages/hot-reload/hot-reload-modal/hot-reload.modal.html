@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Hot Reload Modal</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Dismiss</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="app-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Hot Reload Example</ion-card-title>
+        <ion-card-subtitle>Editing {{ item.title }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="form">
+          <ion-list>
+            <ion-item lines="full">
+              <ion-input type="text" label="Title" labelPlacement="stacked" formControlName="title"></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+              <ion-input type="text" label="Description" labelPlacement="stacked" formControlName="description"></ion-input>
+            </ion-item>
+            <div class="ion-padding-top">
+              <ion-button fill="solid" expand="block" [disabled]="form.invalid" (click)="submit()">
+                <ion-icon name="pencil-outline" slot="start"></ion-icon>
+                Save
+              </ion-button>
+            </div>
+          </ion-list>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
