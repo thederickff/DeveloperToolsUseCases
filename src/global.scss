@@ -26,3 +26,23 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 @import 'theme/fonts.scss';
+
+body.scanner-active {
+  --background: transparent;
+  --ion-background-color: transparent;
+
+  .ion-page {
+    visibility: hidden;
+  }
+
+  .scanner-back-button-container {
+    position: fixed;
+    bottom: 64px;
+    width: 100%;
+    padding: 1em;
+
+    ion-button {
+      font-size: 18px;
+    }
+  }
+}

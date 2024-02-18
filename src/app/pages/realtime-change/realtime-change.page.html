@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Realtime Change</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="form">
+        <ion-item>
+          <ion-input label="Search Grocery Items" labelPlacement="stacked" type="text" formControlName="field"></ion-input>
+          <ion-icon slot="end" name="qr-code-outline" (click)="openQRCodeScanner()"></ion-icon>
+        </ion-item>
+        <div class="ion-padding-top">
+          <ion-button expand="block" [disabled]="form.invalid" (click)="submit()">
+            <ion-icon name="search-outline" slot="start"></ion-icon>
+            Search
+          </ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list *ngIf="searchDone">
+    <ion-item *ngFor="let item of [1, 2, 3, 4, 5, 6]; let i = index" lines="full" [detail]="false">
+      <ion-icon slot="start" name="cart-outline"></ion-icon>
+      <ion-label>
+        <h2>Grocery Item Example #{{ item }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
