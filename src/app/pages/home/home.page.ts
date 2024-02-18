@@ -33,8 +33,7 @@ export class HomePage {
     {
       path: 'learn-css',
       title: 'Learn CSS',
-      icon: 'school-outline',
-      disabled: true
+      icon: 'school-outline'
     },
     {
       path: 'change-suggestion',

@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/realtime-change/realtime-change.module').then(m => m.RealtimeChangePageModule)
   },
   {
+    path: 'learn-css',
+    loadChildren: () => import('./pages/learn-css/learn-css.module').then(m => m.LearnCssPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
