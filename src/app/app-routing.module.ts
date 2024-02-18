@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/learn-css/learn-css.module').then(m => m.LearnCssPageModule)
   },
   {
+    path: 'storage-control',
+    loadChildren: () => import('./pages/storage-control/storage-control.module').then(m => m.StorageControlPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

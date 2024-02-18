@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Storage <ion-text color="secondary">Control</ion-text></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="authUser">
+  <ion-item>
+    <ion-label>
+      <p>{{ authUser.userId }}</p>
+      <h2>Display Name: {{ authUser.displayName }}</h2>
+      <p>Role: {{ authUser.role }}</p>
+    </ion-label>
+  </ion-item>
+  <div *ngIf="authUser.role !== 'admin'" class="app-container">
+    <h2>{{ 'You do not have access to see the content of this page!' }}</h2>
+  </div>
+  <div *ngIf="authUser.role === 'admin'" class="app-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Admin Content</ion-card-title>
+        <ion-card-subtitle>You are seeing a section that only users with the admin role can view</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+      </ion-card-content>
+      <ion-img src="https://godotengine.org/assets/showcase/until-then-2.webp"></ion-img>
+    </ion-card>
+    <ion-card *ngIf="profileType === 'type01'">
+      <ion-card-header>
+        <ion-card-title>Profile Type 01</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        You are seeing a section for users of profile type 01
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="profileType === 'type02'">
+      <ion-card-header>
+        <ion-card-title>Profile Type 02</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        You are seeing a section for users of profile type 02
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

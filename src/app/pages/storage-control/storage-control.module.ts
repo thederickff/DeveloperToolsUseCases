@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { LearnCssPage } from "./learn-css.page";
+import { StorageControlPage } from "./storage-control.page";
 import { CommonModule } from "@angular/common";
 import { IonicModule } from "@ionic/angular";
 import { RouterModule, Routes } from "@angular/router";
@@ -7,16 +7,16 @@ import { RouterModule, Routes } from "@angular/router";
 const routes: Routes = [
   {
     path: '',
-    component: LearnCssPage
+    component: StorageControlPage
   }
 ];
 
 @NgModule({
-  declarations: [LearnCssPage],
+  declarations: [StorageControlPage],
   imports: [
     CommonModule,
     IonicModule,
     RouterModule.forChild(routes)
   ]
 })
-export class LearnCssPageModule { }
+export class StorageControlPageModule { }

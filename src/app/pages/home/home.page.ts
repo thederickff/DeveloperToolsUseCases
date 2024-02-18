@@ -38,7 +38,8 @@ export class HomePage {
     {
       path: 'change-suggestion',
       title: 'Suggest Change',
-      icon: 'flask-outline'
+      icon: 'flask-outline',
+      disabled: true
     },
     {
       path: 'storage-control',
@@ -48,12 +49,14 @@ export class HomePage {
     {
       path: 'inspect-network',
       title: 'Inspect Network',
-      icon: 'globe-outline'
+      icon: 'globe-outline',
+      disabled: true
     },
     {
       path: 'discover-tech',
       title: 'Discover Technologies',
-      icon: 'compass-outline'
+      icon: 'compass-outline',
+      disabled: true
     },
   ]
 
