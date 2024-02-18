@@ -1,0 +1,7 @@
+{
+  "name": "developer-tools-use-cases",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
