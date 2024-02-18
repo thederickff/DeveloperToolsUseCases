@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'developer-tools-use-cases',
+  appId: 'com.github.derickfelix.developertools',
+  appName: 'Developer Tools',
   webDir: 'www',
   server: {
     androidScheme: 'https'
