@@ -42,7 +42,7 @@ npx cap open android
 
 
 ## Running the app on ios platform
-1. Make sure you are on a macos, and have xcode installed
+1. Make sure you are on a macos, and have `xcode` installed
 2. Build the project
 ```sh
 ionic build --prod
