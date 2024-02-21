@@ -19,8 +19,9 @@ npm install -g @ionic/cli
 ```sh
 ionic serve
 ```
-4. Sync capacitor plugins to run on android/ios apps later (Optional)
+4. Preparing the project to run on android/ios apps later (Optional)
 ```sh
+ionic build --prod
 npx cap sync
 ```
 
