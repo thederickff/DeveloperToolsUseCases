@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 import { AlertController, ModalController } from "@ionic/angular";
 import { HotReloadItem } from "../hot-reload.page";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { environment } from "src/environments/environment";
 
 @Component({
   selector: './app-hot-reload-modal',
@@ -19,6 +20,8 @@ export class HotReloadModal implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.simulateBackendUndefinedReturn();
+
     this.form = new FormGroup({
       title: new FormControl(this.item.title, {
         updateOn: 'change',
@@ -28,7 +31,7 @@ export class HotReloadModal implements OnInit {
         updateOn: 'change',
         validators: [Validators.required]
       })
-    })
+    });
   }
 
   dismiss() {
@@ -56,5 +59,11 @@ export class HotReloadModal implements OnInit {
       ]
     });
     alert.present();
+  }
+
+  private simulateBackendUndefinedReturn() {
+    if (environment.production) {
+      this.item = undefined;
+    }
   }
 }
